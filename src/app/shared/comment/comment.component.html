@@ -1,0 +1,7 @@
+<div class="comment-box" fxLayout="column" fxLayoutGap="16px">
+  <span class="bigger-text">{{ comment.name }}</span>
+  <a [href]="'mailto:' + comment.email" title="Send an email">{{
+    comment.email
+  }}</a>
+  <p>{{ comment.body }}</p>
+</div>

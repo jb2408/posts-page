@@ -1,0 +1,16 @@
+<div class="post-box" fxLayout="column">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+  <div class="actions" fxFlex fxLayout="row" fxLayoutAlign="space-between end">
+    <a mat-stroked-button [href]="'/edit-post/' + post.id" title="Edit post"
+      >Edit post</a
+    >
+    <a
+      *ngIf="ifDetailsButton"
+      mat-stroked-button
+      [href]="'/details/' + post.id"
+      title="See post's details"
+      >See details</a
+    >
+  </div>
+</div>

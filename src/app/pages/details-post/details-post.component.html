@@ -1,1 +1,28 @@
-<p>details-post works!</p>
+<div class="details-container" fxLayout="column" fxLayoutGap="16px">
+  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+    <app-post *ngIf="post" [post]="post" [ifDetailsButton]="false"></app-post>
+    <div *ngIf="user" class="user-details" fxLayout="column" fxLayoutGap="8px">
+      <h2>User data:</h2>
+      <span class="bigger-text">{{ user.username }} - {{ user.name }}</span>
+      <a [href]="'mailto:' + user.email" title="Send an email">{{
+        user.email
+      }}</a>
+      <a [href]="'tel:' + user.phone" title="Make a call">{{ user.phone }}</a>
+      <span
+        >{{ user.address.street }}, {{ user.address.zipcode }}
+        {{ user.address.city }}</span
+      >
+      <h3 class="bigger-text">Company:</h3>
+      <span>{{ user.company.name }} - {{ user.company.bs }}</span>
+      <span>{{ user.company.catchPhrase }}</span>
+    </div>
+  </div>
+  <div class="comments-container">
+    <h2>Comments</h2>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayout="start stretch">
+      <ng-container *ngFor="let comment of comments">
+        <app-comment [comment]="comment"></app-comment>
+      </ng-container>
+    </div>
+  </div>
+</div>

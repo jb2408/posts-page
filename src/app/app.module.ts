@@ -9,6 +9,11 @@ import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { EditPostComponent } from './pages/edit-post/edit-post.component';
 import { DetailsPostComponent } from './pages/details-post/details-post.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from './material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PostComponent } from './shared/post/post.component';
+import { CommentComponent } from './shared/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { HttpClientModule } from '@angular/common/http';
     CreatePostComponent,
     EditPostComponent,
     DetailsPostComponent,
+    PostComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FlexLayoutModule,
+    MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

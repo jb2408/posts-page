@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+.all-posts-container {
+  @include pad(10);
+  @media (max-width: $md) {
+    @include pad-all(5, 10, 5, 10);
+  }
+  @media (max-width: $sm) {
+    @include pad(5);
+  }
+
+  .filter-container {
+    min-width: fit-content;
+  }
+}

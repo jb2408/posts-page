@@ -1,0 +1,10 @@
+@import "../styles.scss";
+mat-toolbar {
+  @include pad(6);
+  @media (max-width: $sm) {
+    @include pad(3);
+  }
+}
+.title {
+  color: white;
+}

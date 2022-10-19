@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.comment-box {
+  box-sizing: border-box;
+  border: 2px solid $ligth-background;
+  border-radius: 2px;
+  @include pad(2);
+  max-width: 300px;
+  height: 100%;
+
+  h3 {
+    color: $dark-text;
+    font-weight: bold;
+    line-height: 20px;
+  }
+}

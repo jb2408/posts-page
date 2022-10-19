@@ -1,0 +1,11 @@
+@import "../../../styles.scss";
+
+.details-container {
+  @include pad(10);
+  @media (max-width: $md) {
+    @include pad-all(5, 10, 5, 10);
+  }
+  @media (max-width: $sm) {
+    @include pad(5);
+  }
+}
